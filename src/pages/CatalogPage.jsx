@@ -10,14 +10,17 @@ export default function CatalogPage() {
   const filters = useSelector(state => state.filters);
 
   useEffect(() => {
-    const params = {
-      page,
-      location: filters.location,
-      type: filters.type,
-      features: filters.features.join(","),
-    };
 
+    const params = {
+      _page: page,
+      _limit: 4
+    };
+  
+    if (filters.location) params.location = filters.location;
+    if (filters.type) params.form = filters.type;
+  
     dispatch(fetchCampers(params));
+  
   }, [dispatch, page, filters]);
 
   const loadMore = () => {
