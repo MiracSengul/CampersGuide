@@ -4,7 +4,7 @@ import { setFilters } from '../campersSlice';
 import styles from './Filters.module.css';
 
 // SVG
-import locationIcon from '../../../assets/location.svg';
+import locationIcon from '../../../assets/Location.svg';
 import acIcon from '../../../assets/ac.svg';
 import automaticIcon from '../../../assets/automatic.svg';
 import kitchenIcon from '../../../assets/kitchen.svg';
