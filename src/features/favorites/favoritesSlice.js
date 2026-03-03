@@ -1,21 +1,30 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-  items: JSON.parse(localStorage.getItem("favorites")) || [],
+// get datas from localStorage
+const loadFavorites = () => {
+  try {
+    const serialized = localStorage.getItem('favorites');
+    return serialized ? JSON.parse(serialized) : [];
+  } catch {
+    return [];
+  }
 };
 
 const favoritesSlice = createSlice({
-  name: "favorites",
-  initialState,
+  name: 'favorites',
+  initialState: {
+    items: loadFavorites(), // ID's of favourites
+  },
   reducers: {
     toggleFavorite: (state, action) => {
       const id = action.payload;
-      if (state.items.includes(id)) {
-        state.items = state.items.filter(i => i !== id);
-      } else {
+      const index = state.items.indexOf(id);
+      if (index === -1) {
         state.items.push(id);
+      } else {
+        state.items.splice(index, 1);
       }
-      localStorage.setItem("favorites", JSON.stringify(state.items));
+      localStorage.setItem('favorites', JSON.stringify(state.items));
     },
   },
 });

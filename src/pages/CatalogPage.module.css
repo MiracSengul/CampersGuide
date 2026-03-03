@@ -1,0 +1,21 @@
+.catalogPage {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 64px;
+  gap: 64px;
+}
+
+.filtersSidebar {
+  flex: 0 0 360px;
+}
+
+.catalogMain {
+  flex: 1;
+}
+
+.loadMoreContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}

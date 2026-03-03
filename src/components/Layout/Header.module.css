@@ -1,0 +1,49 @@
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f2f4f7;
+    padding-left: 64px; 
+}
+  
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%; /* veya 1440px, ama padding yoksa */
+    margin: 0 auto;
+    height: 72px;
+    position: relative;
+    /* padding: 0 64px; eğer varsa sil */
+}
+  .logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #101828;
+    line-height: 1.2;
+}
+  
+  .nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 32px; /* Home ile Catalog arasındaki boşluk */
+  }
+  
+  .nav a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #101828;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .nav a:hover {
+    color: #d84343; /* Hover rengi */
+  }
+  
+  .nav a.active {
+    color: #d84343; /* Aktif sayfa rengi */
+  }

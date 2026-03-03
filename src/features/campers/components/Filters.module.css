@@ -1,0 +1,116 @@
+.filters {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.filterGroup {
+  margin-bottom: 32px;
+}
+
+.filterLabel {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #475467;
+  margin-bottom: 8px;
+}
+
+.filterHeading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #101828;
+  margin-bottom: 16px;
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.locationInput {
+  width: 100%;
+  padding: 12px 12px 12px 44px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #dadde1;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  outline: none;
+}
+
+.locationInput:focus {
+  border-color: #e44848;
+}
+
+.featureGrid, .formGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.featureButton, .formButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 12px 8px;
+  background-color: #f7f7f7;
+  border: 1px solid #dadde1;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #101828;
+  transition: all 0.2s ease;
+}
+
+.featureButton:hover, .formButton:hover {
+  border-color: #e44848;
+}
+
+.featureButton.selected, .formButton.selected {
+  border-color: #e44848;
+  background-color: #fff4f0;
+}
+
+.featureButton img, .formButton img {
+  width: 24px;
+  height: 24px;
+}
+
+.searchButton {
+  width: 100%;
+  padding: 12px 24px;
+  background-color: #e44848;
+  color: white;
+  border: none;
+  border-radius: 200px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 8px;
+}
+
+.searchButton:hover {
+  background-color: #d84343;
+}

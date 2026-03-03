@@ -1,14 +1,27 @@
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import heroImage from '../assets/caravan.png'; 
+import styles from './HomePage.module.css';
 
-export default function HomePage() {
-  const navigate = useNavigate();
-
+const HomePage = () => {
   return (
-    <div>
-      <h1>TravelTrucks</h1>
-      <button onClick={() => navigate("/catalog")}>
-        View Now
-      </button>
+    <div 
+      className={styles.home} 
+      style={{ backgroundImage: `url(${heroImage})` }}
+    >
+      <div className={styles.overlay}>
+        <div className={styles.container}>
+          <div className={styles.content}>
+            <h1>Campers of your dreams</h1>
+            <p>You can find everything you want in our catalog</p>
+            <Link to="/catalog" className={styles.ctaButton}>
+              View Now
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default HomePage;

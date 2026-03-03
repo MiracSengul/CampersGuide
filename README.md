@@ -1,16 +1,37 @@
-# React + Vite
+# TravelTrucks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TravelTrucks is a web application for a camper rental company. Users can browse available campers, filter them by various criteria, add them to favorites, view detailed information, and make reservations.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Camper Listings**: View all available campers.
+- **Filtering**: Filter by location, vehicle type, and equipment (AC, kitchen, TV, etc.).
+- **Favorites**: Add campers to a favorites list (persisted in localStorage).
+- **Detail Page**: View photos, technical specifications, user reviews, and a booking form.
+- **Pagination**: Load more campers with a "Load More" button.
+- **Reviews**: User reviews with a 5-star rating system.
+- **Booking Form**: Reserve a camper with name, email, date, and comment fields (success message displayed).
+- **Loading Indicator**: Animated spinner for asynchronous operations.
+- **Error Handling**: User-friendly messages for API errors (e.g., 429 Too Many Requests).
+- **Responsive Design**: Desktop-first, but mobile-friendly.
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** (with Vite)
+- **Redux Toolkit** (state management)
+- **React Router** (routing)
+- **Axios** (API requests)
+- **CSS Modules** (component-based styling)
+- **MockAPI** (backend service)
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository:**
+    ```bash
+    git clone git@github.com:MiracSengul/CampersGuide.git
+
+## Install dependencies
+    npm install
+
+## Start the development server
+    npm run dev
