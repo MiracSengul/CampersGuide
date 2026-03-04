@@ -33,8 +33,8 @@ const CatalogPage = () => {
         <CamperList campers={items} favorites={favorites} />
         {hasMore && (
           <div className={styles.loadMoreContainer}>
-            <Button onClick={handleLoadMore} disabled={status === 'loading'}>
-              Load More
+            <Button onClick={handleLoadMore} disabled={status === 'loading'} variant="secondary">
+              {status === 'loading' ? 'Loading...' : 'Load More'}
             </Button>
           </div>
         )}
