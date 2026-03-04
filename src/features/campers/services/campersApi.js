@@ -45,7 +45,6 @@ const buildQueryString = (params) => {
  */
 export const fetchCampers = async (filters) => {
   const query = buildQueryString(filters);
-  console.log('🔍 API Request:', query); // For debugging purposes
   const response = await axios.get(`${BASE_URL}/campers?${query}`);
   return response.data; // Expected format: { total, items }
 };

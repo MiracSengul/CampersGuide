@@ -70,6 +70,7 @@
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
+  flex-shrink: 0;
 }
 
 .description {
@@ -79,39 +80,18 @@
   color: #475467;
 }
 
-/* ALT KISIM: İKİ SÜTUN */
-.bottomSection {
-  display: flex;
-  gap: 40px;
-}
-
-.leftColumn {
-  width: 631px;
-  flex: none;
-}
-
-.rightColumn {
-  width: 641px;
-  flex: none;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  border: 1px solid #dadde1;
-  padding: 44px;
-  box-sizing: border-box;
-  height: fit-content;
-}
-
+/* Sekmeler - tam genişlik */
 .tabs {
   display: flex;
   gap: 24px;
-  border-bottom: 2px solid #dadde1;
-  margin-bottom: 24px;
+  border-bottom: none;
+  margin-bottom: 0; /* Alt boşluk yok */
 }
 
 .tabButton {
   background: none;
   border: none;
-  padding: 8px 0;
+  padding: 8px 0 2px 0;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 20px;
@@ -120,6 +100,7 @@
   cursor: pointer;
   border-bottom: 2px solid transparent;
   transition: all 0.2s ease;
+  margin-bottom: -2px; /* Çizgiyi yukarı çek */
 }
 
 .tabButton.activeTab {
@@ -127,6 +108,70 @@
   border-bottom-color: #e44848;
 }
 
+/* Tam genişlikte ayırıcı çizgi */
+.fullWidthHr {
+  border: none;
+  border-top: 2px solid #dadde1;
+  margin: 0 0 32px 0; /* Üst margin 0, alt margin 32px */
+  width: 100%;
+}
+
+/* İki sütunlu alt kısım */
+.bottomSection {
+  display: flex;
+  gap: 40px;
+}
+
+.leftColumn {
+  width: 631px;
+  height: 588px; /* Sabit yükseklik */
+  overflow-y: auto; /* İçerik taşarsa scroll */
+  flex: none;
+  padding-right: 8px; /* Scroll ile içerik arasında boşluk (opsiyonel) */
+  box-sizing: border-box;
+}
+
+/* Vehicle details liste */
+.detailsList {
+  margin-top: 32px;
+}
+
+.detailsList h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #101828;
+  margin: 0 0 24px 0;
+}
+
+.detailsItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detailsItems li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #101828;
+  border-bottom: 1px solid #dadde1;
+}
+
+.detailsItems li:last-child {
+  border-bottom: none;
+}
+
+.detailsItems li span {
+  font-weight: 500;
+  color: #475467;
+}
+
+/* Features grid */
 .featuresTab {
   display: flex;
   flex-direction: column;
@@ -157,35 +202,7 @@
   height: 16px;
 }
 
-.detailsTable h3 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  color: #101828;
-  margin: 0 0 16px 0;
-}
-
-.detailsTable table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.detailsTable td {
-  padding: 12px 0;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  color: #101828;
-  border-bottom: 1px solid #dadde1;
-}
-
-.detailsTable td:first-child {
-  font-weight: 500;
-  color: #475467;
-  width: 40%;
-}
-
+/* Reviews */
 .reviewsTab {
   display: flex;
   flex-direction: column;
@@ -235,61 +252,68 @@
   margin: 0;
 }
 
-.rightColumn h3 {
+/* Form stilleri */
+.bookingSection {
+  width: 641px;
+  height: 588px;
+  flex: none;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #dadde1;
+  padding: 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.bookingSection h3 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
   color: #101828;
-  margin: 0 0 8px 0;
+  margin: 0 0 4px 0;
 }
 
 .bookingSubtitle {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #475467;
-  margin-bottom: 24px;
+  color: #6c717b;
+  margin-bottom: 16px;
 }
 
 .bookingForm {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
+  flex: 1;
 }
 
 .formGroup {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-}
-
-.formGroup label {
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  color: #101828;
+  /* gap kaldırıldı çünkü label yok */
 }
 
 .formGroup input,
 .formGroup textarea {
   width: 100%;
-  padding: 12px 16px;
+  padding: 10px 14px;
   border: 1px solid #dadde1;
   border-radius: 8px;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   line-height: 20px;
   outline: none;
-  background-color: #ffffff;
+  background-color: #f7f7f7;
   color: #101828;
   box-sizing: border-box;
 }
 
 .formGroup input::placeholder,
 .formGroup textarea::placeholder {
-  color: #475467;
+  color: #9b9faa;
 }
 
 .formGroup input:focus,
@@ -298,7 +322,7 @@
 }
 
 .submitButton {
-  padding: 12px 24px;
+  padding: 10px 20px;
   background-color: #e44848;
   color: white;
   border: none;
@@ -310,7 +334,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   align-self: flex-start;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .submitButton:hover {
