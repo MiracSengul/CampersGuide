@@ -80,12 +80,11 @@
   color: #475467;
 }
 
-/* Sekmeler - tam genişlik */
 .tabs {
   display: flex;
   gap: 24px;
   border-bottom: none;
-  margin-bottom: 0; /* Alt boşluk yok */
+  margin-bottom: 0; 
 }
 
 .tabButton {
@@ -100,7 +99,7 @@
   cursor: pointer;
   border-bottom: 2px solid transparent;
   transition: all 0.2s ease;
-  margin-bottom: -2px; /* Çizgiyi yukarı çek */
+  margin-bottom: -2px; 
 }
 
 .tabButton.activeTab {
@@ -108,15 +107,14 @@
   border-bottom-color: #e44848;
 }
 
-/* Tam genişlikte ayırıcı çizgi */
 .fullWidthHr {
   border: none;
   border-top: 2px solid #dadde1;
-  margin: 0 0 32px 0; /* Üst margin 0, alt margin 32px */
+  margin: 0 0 32px 0; 
   width: 100%;
 }
 
-/* İki sütunlu alt kısım */
+/* Lower side */
 .bottomSection {
   display: flex;
   gap: 40px;
@@ -124,14 +122,14 @@
 
 .leftColumn {
   width: 631px;
-  height: 588px; /* Sabit yükseklik */
-  overflow-y: auto; /* İçerik taşarsa scroll */
+  height: 588px; 
+  overflow-y: auto; 
   flex: none;
-  padding-right: 8px; /* Scroll ile içerik arasında boşluk (opsiyonel) */
+  padding-right: 8px; 
   box-sizing: border-box;
 }
 
-/* Vehicle details liste */
+/* Vehicle details list */
 .detailsList {
   margin-top: 32px;
 }
@@ -252,7 +250,7 @@
   margin: 0;
 }
 
-/* Form stilleri */
+/* Form styles */
 .bookingSection {
   width: 641px;
   height: 588px;
@@ -293,7 +291,6 @@
 .formGroup {
   display: flex;
   flex-direction: column;
-  /* gap kaldırıldı çünkü label yok */
 }
 
 .formGroup input,
@@ -333,7 +330,7 @@
   line-height: 24px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  align-self: center; /* değişiklik: flex-start yerine center */
+  align-self: center; 
   margin-top: 4px;
 }
 
@@ -380,7 +377,7 @@
   display: block;
 }
 
-/* react-datepicker'in kendi stillerini override etmek için */
+/* react-datepicker */
 :global(.react-datepicker) {
   font-family: 'Inter', sans-serif !important;
   border: 1px solid #dadde1 !important;

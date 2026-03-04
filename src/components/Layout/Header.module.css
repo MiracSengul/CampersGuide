@@ -8,11 +8,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 100%; /* veya 1440px, ama padding yoksa */
+    max-width: 100%; 
     margin: 0 auto;
     height: 72px;
     position: relative;
-    /* padding: 0 64px; eğer varsa sil */
 }
   .logo {
     font-family: 'Inter', sans-serif;
@@ -27,7 +26,7 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 32px; /* Home ile Catalog arasındaki boşluk */
+    gap: 32px;
   }
   
   .nav a {
@@ -41,9 +40,9 @@
   }
   
   .nav a:hover {
-    color: #d84343; /* Hover rengi */
+    color: #d84343;
   }
   
   .nav a.active {
-    color: #d84343; /* Aktif sayfa rengi */
+    color: #d84343;
   }
