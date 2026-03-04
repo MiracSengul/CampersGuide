@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { setFilters } from '../campersSlice';
 import styles from './Filters.module.css';
 
-// SVG
+// SVG 
 import locationIcon from '../../../assets/Location.svg';
 import acIcon from '../../../assets/ac.svg';
 import automaticIcon from '../../../assets/automatic.svg';
@@ -20,7 +20,6 @@ const featureOptions = [
   { label: 'Kitchen', value: 'kitchen', icon: kitchenIcon },
   { label: 'TV', value: 'TV', icon: tvIcon },
   { label: 'Bathroom', value: 'bathroom', icon: bathroomIcon },
-  // Other features can be added optionally.
 ];
 
 const formOptions = [
